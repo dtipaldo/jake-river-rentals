@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-const db = require("../config/keys.js").mongoURI;
+const db = require("../../config/keys.js").mongoURI;
 mongoose.connect(db, {useNewUrlParser: true})
 // eslint-disable-next-line no-console
     .then(() => console.log("MongoDB connected"))
@@ -19,7 +19,7 @@ mongoose.connect(db, {useNewUrlParser: true})
 
 // Passport middleware
 app.use(passport.initialize());
-require("../config/passport")(passport);
+require("../../config/passport")(passport);
 // Routes
 app.use("/api/users", users);
 
