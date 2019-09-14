@@ -7,20 +7,18 @@
   },
   "scripts": {
     "postinstall": "run-p install:backend install:frontend",
-    "install:backend": "cd backend/src && npm install",
+    "install:backend": "cd backend && npm install",
     "install:frontend": "cd frontend && npm install",
     "start": "run-p start:backend start:frontend",
     "start:dev": "run-p start:backend:local start:frontend",
-    "start:backend": "cd backend/src && npm run server",
-    "start:backend:local": "cd backend/src && npm run server:local",
+    "start:backend": "cd backend && npm run server",
+    "start:backend:local": "cd backend && npm run server:local",
     "start:frontend": "cd frontend && npm start",
     "build": "run-p build:backend build:frontend",
-    "build:backend": "cd backend/src && npm build",
-    "build:frontend": "cd backend/frontend && npm build",
-    "lint": "eslint backend/**"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "build:backend": "cd backend && npm build",
+    "build:frontend": "cd frontend && npm build",
+    "lint": "run-p lint:backend",
+    "lint:backend": "cd backend && npm run lint"
   },
   "browserslist": {
     "production": [
@@ -34,7 +32,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "eslint": "^6.3.0"
-  }
+  "devDependencies": {}
 }
