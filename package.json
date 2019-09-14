@@ -21,6 +21,7 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
+    "lint": "eslint src/**",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

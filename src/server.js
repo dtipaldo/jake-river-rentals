@@ -9,9 +9,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 mongoose.connect(db, {useNewUrlParser: true})
+// eslint-disable-next-line no-console
     .then(() => console.log("MongoDB connected"))
+    // eslint-disable-next-line no-console
     .catch(e => console.log(e));
 
+// eslint-disable-next-line no-console
 app.listen(port, () => console.log(`Server up on port ${port}!`));
 
 
