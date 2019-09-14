@@ -2,32 +2,22 @@
   "name": "jake-river-rentals",
   "version": "0.1.0",
   "private": true,
-  "main": "src/backend/server.js",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "concurrently": "^4.1.2",
-    "express": "^4.17.1",
-    "is-empty": "^1.2.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.7.0",
-    "passport": "^0.4.0",
-    "passport-jwt": "^4.0.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1",
-    "validator": "^11.1.0"
+    "npm-run-all": "^4.1.5"
   },
   "scripts": {
-    "start": "node $npm_package_main",
-    "server": "nodemon $npm_package_main",
-    "lint": "eslint src/**",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "frontend": "npm start",
-    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
-    "prod": "concurrently \"npm run start\" \"npm run frontend\""
+    "postinstall": "run-p install:backend install:frontend",
+    "install:backend": "cd backend/src && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "start": "run-p start:backend start:frontend",
+    "start:dev": "run-p start:backend:local start:frontend",
+    "start:backend": "cd backend/src && npm run server",
+    "start:backend:local": "cd backend/src && npm run server:local",
+    "start:frontend": "cd frontend && npm start",
+    "build": "run-p build:backend build:frontend",
+    "build:backend": "cd backend/src && npm build",
+    "build:frontend": "cd backend/frontend && npm build",
+    "lint": "eslint backend/**"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,7 +35,6 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^6.3.0",
-    "nodemon": "^1.19.2"
+    "eslint": "^6.3.0"
   }
 }
