@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import NavBar from './navbar';
+import FooterBar from "./FooterBar";
+import Body from "./Body";
 
 class App extends Component {
     render() {
         return (
             <div>
                 <NavBar/>
-                <p>Paddle the Jake River</p>
+                <Body></Body>
+                <FooterBar/>
             </div>
 
         );
