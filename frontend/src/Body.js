@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ProCon from "./ProCon";
 import {Route} from "react-router-dom";
 import FooterBar from "./FooterBar";
+import Tools from "./Tools";
 
 const StyledBody = styled.div`
     min-height: 600px;
@@ -16,7 +17,7 @@ export default class Body extends Component {
     render() {
         return (
             <StyledBody>
-                <Route path="/tools" component={ProCon} />
+                <Route path="/tools" component={Tools} />
                 <Route path="/games" component={FooterBar} />
             </StyledBody>
         );

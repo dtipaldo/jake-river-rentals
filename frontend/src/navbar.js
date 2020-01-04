@@ -50,7 +50,7 @@ export default class NavBar extends Component {
                 {/*    <StyledNavBarButton>Games</StyledNavBarButton>*/}
                 {/*</Link>*/}
                 <Link to="/tools" style={{ textDecoration: 'none' }}>
-                    <StyledNavBarButton>Pros vs Cons</StyledNavBarButton>
+                    <StyledNavBarButton>Tools</StyledNavBarButton>
                 </Link>
                 <Link to="/login" style={{ textDecoration: 'none' }}>
                     <StyledNavBarButton>Login</StyledNavBarButton>
