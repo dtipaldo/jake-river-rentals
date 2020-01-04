@@ -8,6 +8,7 @@ const StyledFooterBar = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    font-family: "Trebuchet MS";
 `;
 
 

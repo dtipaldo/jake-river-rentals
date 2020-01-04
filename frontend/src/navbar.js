@@ -3,18 +3,6 @@ import river100 from './assets/river_100x100.png';
 import styled from "styled-components";
 import {Link} from "react-router-dom";
 
-// const styles = {
-//     root: {
-//         flexGrow: 1,
-//     },
-//     title: {
-//         flexGrow: 1,
-//     },
-//     navBarIcon: {
-//         height: '50px',
-//         width: '50px',
-//     },
-// };
 const StyledNavBar = styled.div`
     height: 90px;
     background-color: #CCBF86
@@ -23,6 +11,7 @@ const StyledNavBar = styled.div`
     align-items: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    font-family: "Trebuchet MS";
 `;
 
 const StyledNavBarButton = styled.div`
@@ -57,8 +46,11 @@ export default class NavBar extends Component {
                 <Link to="/" style={{ textDecoration: 'none' }}>
                     <StyledNavBarTitle>Jake River Rentals</StyledNavBarTitle>
                 </Link>
-                <Link to="/games" style={{ textDecoration: 'none' }}>
-                    <StyledNavBarButton>Games</StyledNavBarButton>
+                {/*<Link to="/games" style={{ textDecoration: 'none' }}>*/}
+                {/*    <StyledNavBarButton>Games</StyledNavBarButton>*/}
+                {/*</Link>*/}
+                <Link to="/tools" style={{ textDecoration: 'none' }}>
+                    <StyledNavBarButton>Pros vs Cons</StyledNavBarButton>
                 </Link>
                 <Link to="/login" style={{ textDecoration: 'none' }}>
                     <StyledNavBarButton>Login</StyledNavBarButton>
