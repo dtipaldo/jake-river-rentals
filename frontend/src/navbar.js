@@ -46,15 +46,15 @@ export default class NavBar extends Component {
                 <Link to="/" style={{ textDecoration: 'none' }}>
                     <StyledNavBarTitle>Jake River Rentals</StyledNavBarTitle>
                 </Link>
-                {/*<Link to="/games" style={{ textDecoration: 'none' }}>*/}
-                {/*    <StyledNavBarButton>Games</StyledNavBarButton>*/}
-                {/*</Link>*/}
+                <Link to="/games" style={{ textDecoration: 'none' }}>
+                    <StyledNavBarButton>Games</StyledNavBarButton>
+                </Link>
                 <Link to="/tools" style={{ textDecoration: 'none' }}>
                     <StyledNavBarButton>Tools</StyledNavBarButton>
                 </Link>
-                <Link to="/login" style={{ textDecoration: 'none' }}>
-                    <StyledNavBarButton>Login</StyledNavBarButton>
-                </Link>
+                {/*<Link to="/login" style={{ textDecoration: 'none' }}>*/}
+                {/*    <StyledNavBarButton>Login</StyledNavBarButton>*/}
+                {/*</Link>*/}
 
             </StyledNavBar>
         );

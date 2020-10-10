@@ -96,7 +96,7 @@ export default class ProCon extends React.Component {
 
     renderAnswerFromScore(score){
         if (score === -1){
-            return "No Data"
+            return ""
         }
 
         if (score > AVG) {

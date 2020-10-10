@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import styled from "styled-components";
 import ProCon from "./ProCon";
 import {Link, Route} from "react-router-dom";
-import FooterBar from "./FooterBar";
 import UnderConstruction from "./UnderConstruction";
+import CashFlow from "./CashFlow";
 
 const StyledTools = styled.div`
   display: flex;
@@ -34,15 +34,15 @@ export default class Tools extends Component {
                     <Link to="/tools/procon" style={{ textDecoration: 'none' }}>
                         <StyledSideBarButton>Pro Vs Con</StyledSideBarButton>
                     </Link>
-                    <Link to="/tools/nexttool" style={{ textDecoration: 'none' }}>
-                        <StyledSideBarButton>Next Tool</StyledSideBarButton>
+                    <Link to="/tools/cashflow" style={{ textDecoration: 'none' }}>
+                        <StyledSideBarButton>Cash Flow</StyledSideBarButton>
                     </Link>
                     <Link to="/tools/nextnexttool" style={{ textDecoration: 'none' }}>
                         <StyledSideBarButton>Next Next Tool</StyledSideBarButton>
                     </Link>
                 </StyledSideBar>
                 <Route path="/tools/procon" component={ProCon} />
-                <Route path="/tools/nexttool" component={UnderConstruction} />
+                <Route path="/tools/cashflow" component={CashFlow} />
                 <Route path="/tools/nextnexttool" component={UnderConstruction} />
             </StyledTools>
         );

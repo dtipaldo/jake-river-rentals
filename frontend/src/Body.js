@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import styled from "styled-components";
-import ProCon from "./ProCon";
 import {Route} from "react-router-dom";
-import FooterBar from "./FooterBar";
 import Tools from "./Tools";
+import UnderConstruction from "./UnderConstruction";
+import LandingPage from "./LandingPage";
 
 const StyledBody = styled.div`
     min-height: 600px;
@@ -17,8 +17,9 @@ export default class Body extends Component {
     render() {
         return (
             <StyledBody>
+                <Route path="/" exact={true} component={LandingPage} />
                 <Route path="/tools" component={Tools} />
-                <Route path="/games" component={FooterBar} />
+                <Route path="/games" component={UnderConstruction} />
             </StyledBody>
         );
     }
