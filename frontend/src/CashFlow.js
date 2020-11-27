@@ -3,7 +3,6 @@ import moment from 'moment'
 import styled from "styled-components";
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import {green} from "@material-ui/core/colors";
 const dtmbData = require('./cashFlow.json');
 
 const StyledCashFlow = styled.div`
